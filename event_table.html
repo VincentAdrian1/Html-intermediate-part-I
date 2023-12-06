@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+		<title>Event List</title>
+		<style>
+			* {
+				text-align: center;
+				font-family: 'Open Sans', sans-serif;	
+			}
+			
+			table {
+				width: 90%;
+				border-collapse: collapse;
+				display: inline-table;
+				margin: 25px 0;
+				font-size: 0.9em;	
+				min-width: 400px;
+				border-radius: 5px 5px 0 0;
+				overflow: hidden;
+				box-shadow: 0 0 20px rgba(226, 169, 169, 0.15);
+			}
+			
+			thead tr {
+				background-color: #6d4242;
+				color: white;
+				font-weight: bold;
+			}
+				
+			th, td {
+				padding: 12px 20px;
+				text-align: center;
+				border: 1px solid #dddddd;
+			}	
+			
+			tbody tr:nth-of-type(even) {
+				background-color: #f3f3f3;
+			}
+			
+			tbody tr:last-of-type {
+				border-bottom: 2px solid #6d4242;
+			}
+			
+			p {
+				text-align: left;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>List of Events</h1>
+		<table>
+			<thead>
+				<tr>
+					<th colspan="2">Event</th>
+					<th>Date</th>
+					<th>Location</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Christmas Party</td>
+					<td><p>The organization's official Christmas party. All members of the organizations will be required to attend.</p></td>
+					<td>December 20, 2023</td>
+					<td>Performing Arts Center</td>
+					
+				</tr>
+				<tr>
+					<td>Ironman 70.3</td>
+					<td><p>The race will feature a swim out to the ocean from the bay walk, to rolling bike and run courses lined with spectator and local support</p></td>
+					<td>November 12, 2023</td>
+					<td>Puerto Princesa City</td>
+				</tr>
+				<tr>
+					<td>Halloween Party</td>
+					<td><p>It's a night to let your imagination run wild, snack on sweets and look out for spooky surprises. Halloween parties are a great way to gather friends and neighbors for a fun fall evening</p></td>
+					<td>October 30, 2023</td>
+					<td>School Grounds</td>
+				</tr>
+				<tr>
+					<td>New Year's Eve Celebration</td>
+					<td><p>Celebrate last day of the year and Welcome the new year with family and friends</p></td>
+					<td>December 31, 2023</td>
+					<td>Home</td>
+				</tr>
+				
+			</tbody>
+		</table>
+	</body>

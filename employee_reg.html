@@ -1,0 +1,144 @@
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+    }
+
+    .container {
+        max-width: 420px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    button[type="submit"] {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    
+    .name-container {
+        display: flex;
+    }
+    
+    .lastname {
+        flex: 1.5;
+        margin-right: 8px;
+    }
+
+    .firstname {
+        flex: 2;
+        margin-right: 8px;
+    }
+
+    .middlename {
+        flex: 1.5;
+    }
+    
+    input:required:valid {
+        border-color:green;	
+    }
+    
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Employee Registration</h1>
+    <form action="#" method="post" id="registration-form">
+        <div class="form-group">
+            <label for="lastname">Full Name:</label>
+            <div class="name-container">
+                <div class="lastname">
+                    <input type="text" id="lastname" name="lastname" placeholder="Last Name" required>
+                </div>
+                <div class="firstname">
+                    <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
+                </div>
+                <div class="middlename">
+                    <input type="text" id="middlename" name="middlename" placeholder="Middle Name" required>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="birthdate">Birthdate:</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+        </div>
+        <div class="form-group">
+            <label for="department">Department:</label>
+            <select id="department" name="department" required>
+                <option value="hr">HR</option>
+                <option value="finance">Finance</option>
+                <option value="it">IT</option>
+                <option value="sales">Sales</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="office">Office:</label>
+            <input type="text" id="office" name="office" required>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <script>
+        document.getElementById("registration-form").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+    
+            var form = event.target;
+            var formData = new FormData(form);
+        
+            for (var pair of formData.entries()) {
+                console.log(pair[0] + ": " + pair[1]);
+            }
+        });
+    </script>
+    
+</div>
+</body>
+</html>
